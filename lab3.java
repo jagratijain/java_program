@@ -20,7 +20,7 @@ abstract class HostelItem {
     }
 }
 
-class Room extends HostelItem {
+final class Room extends HostelItem {
     private int roomNumber;
 
     public Room(String name, double price, int roomNumber) {
@@ -40,7 +40,7 @@ class Room extends HostelItem {
     }
 }
 
-class Meal extends HostelItem {
+final class Meal extends HostelItem {
     private String type;
 
     public Meal(String name, double price, String type) {
@@ -71,10 +71,10 @@ public class lab3 {
             System.out.println("Select an option:");
             System.out.println("1. Room Booking");
             System.out.println("2. Meal Booking");
-            System.out.println("3. Exit");  
+            System.out.println("3. Exit");
             System.out.println("-----------------------------------------------------------------------------");
             int choice = scanner.nextInt();
-            scanner.nextLine(); 
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
